@@ -18,7 +18,7 @@ var source = fs.readFileSync(__dirname + '/template.css').toString();
 module.exports = function (config) {
   config = config || {};
 
-  // Stringify code points.
+  // Stringify code points: no-op for strings, base conversion for numbers.
   if (config.icons) {
     config = extend({}, config, {
       icons: config.icons.map(function (icon) {

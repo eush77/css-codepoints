@@ -29,7 +29,7 @@ var output = cssCodepoints({
     codepoint: 0x1337
   }, {
     name: 'bar',
-    codepoint: 0x266e
+    codepoint: '266e'
   }]
 });
 

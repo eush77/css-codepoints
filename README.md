@@ -60,18 +60,20 @@ generated.css:
 
 ## Options
 
-| Option     | Required?  | Type                                |
-| :--------- | :--------: | :---------------------------------- |
-| fontFamily | Yes        | string                              |
-| formats    | Yes, &ge;1 | {url: string, type: string}[]       |
-| icons      | No         | {name: string, codepoint: number}[] |
-| prefix     | No         | string                              |
+| Option     | Required?  | Type                                              |
+| :--------- | :--------: | :------------------------------------------------ |
+| fontFamily | Yes        | string                                            |
+| formats    | Yes, &ge;1 | {url: string, type: string}[]                     |
+| icons      | No         | {name: string, codepoint: {number&#x7c;string}}[] |
+| prefix     | No         | string                                            |
 
 `options.fontFamily` is merely the value of `font-face` property.
 
 `options.formats` describes the `@font-face`'s `src` property.
 
-`options.icons` describes code points to generate classes for.
+`options.icons` describes code points to generate classes for. The value of `codepoint` property
+should normally be a number, but for the sake of compatibility with JSON configs (which have no
+notion of a hexadecimal number) it is allowed to be a string of hex digits instead.
 
 `options.prefix` is the common class prefix, empty by default.
 
