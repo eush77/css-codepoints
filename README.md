@@ -40,6 +40,7 @@ generated.css:
     font-weight: normal;
     font-variant: normal;
     text-transform: none;
+    vertical-align: bottom;
 }
 .icon-bar::before {
     content: "\266e";
@@ -49,17 +50,18 @@ generated.css:
     font-weight: normal;
     font-variant: normal;
     text-transform: none;
+    vertical-align: bottom;
 }
 ```
 
 ## Options
 
-| Option     | Required?  | Type                                                     |
-| :--------- | :--------: | :------------------------------------------------------- |
-| fontFamily | Yes        | string                                                   |
-| formats    | Yes, &ge;1 | Object.<type: string, url: string>[]                     |
-| icons      | No         | Object.<name: string, codepoint: {number&#x7c;string}>[] |
-| prefix     | No         | string                                                   |
+| Option     | Required?  | Type                                                           |
+| :--------- | :--------: | :------------------------------------------------------------- |
+| fontFamily | Yes        | string                                                         |
+| formats    | Yes, &ge;1 | Object.&lt;type: string, url: string&gt;[]                     |
+| icons      | No         | Object.&lt;name: string, codepoint: {number&#x7c;string}&gt;[] |
+| prefix     | No         | string                                                         |
 
 `options.fontFamily` is merely the value of `font-face` property.
 
@@ -67,7 +69,7 @@ generated.css:
 
 `options.icons` describes code points to generate classes for. Each `codepoint` value
 should normally be a number, but for the sake of compatibility with JSON configs (which have no
-notion of a hexadecimal number) it is allowed to be a string of hex digits instead.
+notion of a hexadecimal number) it is also allowed to be a string of hex digits.
 
 `options.prefix` is the common class prefix, empty by default.
 
