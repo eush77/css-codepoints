@@ -17,20 +17,14 @@ var predefinedOutput = fs.readFileSync(__dirname + '/output.css').toString();
 var output = cssCodepoints({
   fontFamily: 'MySuperFont',
   prefix: 'icon-',
-  formats: [{
-    url: 'my_super_font.svg',
-    type: 'svg'
-  }, {
-    url: 'my_super_font.ttf',
-    type: 'ttf'
-  }],
-  icons: [{
-    name: 'foo',
-    codepoint: 0x1337
-  }, {
-    name: 'bar',
-    codepoint: '266e'
-  }]
+  formats: {
+    svg: 'my_super_font.svg',
+    ttf: 'my_super_font.ttf'
+  },
+  icons: {
+    foo: 0x1337,
+    bar: '266e'
+  }
 });
 
 

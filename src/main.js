@@ -1,7 +1,9 @@
 'use strict';
 
 var mustache = require('mustache')
-  , extend = require('extend');
+  , extend = require('extend')
+  , pairs = require('lodash.pairs')
+  , zipObject = require('lodash.zipobject');
 
 var fs = require('fs');
 
@@ -16,17 +18,24 @@ var source = fs.readFileSync(__dirname + '/template.css').toString();
  * @return {string}
  */
 module.exports = function (config) {
-  config = config || {};
+  // Make a working copy to avoid committing accidental changes.
+  config = extend({}, config || {});
 
   // Stringify code points: no-op for strings, base conversion for numbers.
+  // Rewrite in array-of-objects notation.
   if (config.icons) {
-    config = extend({}, config, {
-      icons: config.icons.map(function (icon) {
-        return {
-          name: icon.name,
-          codepoint: icon.codepoint.toString(0x10)
-        };
-      })
+    config.icons = pairs(config.icons).map(function (icon) {
+      return {
+        name: icon[0],
+        codepoint: icon[1].toString(0x10)
+      };
+    });
+  }
+
+  // Rewrite in array-of-objects notation.
+  if (config.formats) {
+    config.formats = pairs(config.formats).map(function (format) {
+      return zipObject(['type', 'url'], format);
     });
   }
 

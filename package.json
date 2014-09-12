@@ -29,6 +29,8 @@
   ],
   "dependencies": {
     "extend": "^1.3.0",
+    "lodash.pairs": "^2.4.1",
+    "lodash.zipobject": "^2.4.1",
     "mustache": "^0.8.2"
   },
   "devDependencies": {}
