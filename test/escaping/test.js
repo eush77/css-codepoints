@@ -4,7 +4,8 @@ var cssCodepoints = require('../..')
   , equal = require('../equality');
 
 var assert = require('assert')
-  , fs = require('fs');
+  , fs = require('fs')
+  , util = require('util');
 
 
 var predefinedOutput = fs.readFileSync(__dirname + '/output.css').toString();
@@ -22,5 +23,6 @@ var config = {
 
 
 module.exports = function () {
+  util.puts(module.filename);
   assert(equal(cssCodepoints(config), predefinedOutput));
 };
