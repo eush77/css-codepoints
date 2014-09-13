@@ -1,16 +1,16 @@
 @font-face {
-    font-family: "{{fontFamily}}";
+    font-family: "{{{fontFamily}}}";
     src: {{#_commaSeparated}}
          {{#formats}}
-         url("{{url}}") format("{{type}}"),
+         url("{{{url}}}") format("{{{type}}}"),
          {{/formats}}
          {{/_commaSeparated}};
 }
 
 {{#icons}}
-.{{prefix}}{{name}}::before {
+.{{{prefix}}}{{{name}}}::before {
     content: "\{{codepoint}}";
-    font-family: "{{fontFamily}}";
+    font-family: "{{{fontFamily}}}";
     speak: none;
     font-style: normal;
     font-weight: normal;
