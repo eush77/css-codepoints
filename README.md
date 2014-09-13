@@ -1,4 +1,11 @@
-# CSS Codepoints
+# CSS Codepoints [![Build Status][travis-badge]][travis] [![Dependency Status][david-badge]][david] [![DevDependency Status][david-dev-badge]][david-dev]
+
+[travis-badge]: https://travis-ci.org/eush77/css-codepoints.svg
+[travis]: https://travis-ci.org/eush77/css-codepoints
+[david-badge]: https://david-dm.org/eush77/css-codepoints.png
+[david]: https://david-dm.org/eush77/css-codepoints
+[david-dev-badge]: https://david-dm.org/eush77/css-codepoints/dev-status.png
+[david-dev]: https://david-dm.org/eush77/css-codepoints#info=devDependencies
 
 Generate CSS classes per font glyph.
 
