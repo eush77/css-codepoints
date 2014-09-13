@@ -1,5 +1,7 @@
 # CSS Codepoints [![Build Status][travis-badge]][travis] [![Dependency Status][david-badge]][david] [![DevDependency Status][david-dev-badge]][david-dev]
 
+[![npm](https://nodei.co/npm/css-codepoints.png)](https://nodei.co/npm/css-codepoints/)
+
 [travis-badge]: https://travis-ci.org/eush77/css-codepoints.svg
 [travis]: https://travis-ci.org/eush77/css-codepoints
 [david-badge]: https://david-dm.org/eush77/css-codepoints.png
