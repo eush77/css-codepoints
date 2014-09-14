@@ -9,7 +9,9 @@ var mustache = require('mustache')
 var fs = require('fs');
 
 
-var source = fs.readFileSync(__dirname + '/template.css').toString();
+var source = fs.readFileSync(__dirname + '/template.css', {
+  encoding: 'utf8'
+});
 
 
 var escapeString = function (string) {

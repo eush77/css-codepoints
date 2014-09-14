@@ -8,7 +8,9 @@ var assert = require('assert')
   , util = require('util');
 
 
-var predefinedOutput = fs.readFileSync(__dirname + '/output.css').toString();
+var predefinedOutput = fs.readFileSync(__dirname + '/output.css', {
+  encoding: 'utf8'
+});
 
 var config = {
   fontFamily: 'MySuperFont',
