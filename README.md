@@ -1,4 +1,4 @@
-# CSS Codepoints [![Build Status][travis-badge]][travis] [![Dependency Status][david-badge]][david] [![DevDependency Status][david-dev-badge]][david-dev]
+# css-codepoints [![Build Status][travis-badge]][travis] [![Dependency Status][david-badge]][david] [![DevDependency Status][david-dev-badge]][david-dev]
 
 [![npm](https://nodei.co/npm/css-codepoints.png)](https://nodei.co/npm/css-codepoints/)
 
