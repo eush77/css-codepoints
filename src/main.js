@@ -4,7 +4,7 @@ var mustache = require('mustache')
   , cssesc = require('cssesc')
   , extend = require('extend')
   , pairs = require('lodash.pairs')
-  , zipObject = require('lodash.zipobject');
+  , zipmap = require('zipmap');
 
 var fs = require('fs');
 
@@ -52,7 +52,7 @@ module.exports = function (config) {
   // Escape as strings.
   if (config.formats) {
     config.formats = pairs(config.formats).map(function (format) {
-      return zipObject(['type', 'url'], format.map(escapeString));
+      return zipmap(['type', 'url'], format.map(escapeString));
     });
   }
 
