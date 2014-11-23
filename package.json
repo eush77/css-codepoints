@@ -4,9 +4,9 @@
   "description": "Generate CSS classes per font glyph",
   "author": "Eugene Sharygin <eush77@gmail.com>",
   "license": "MIT",
-  "main": "src/main.js",
+  "main": "src",
   "scripts": {
-    "test": "node test/test.js"
+    "test": "node test"
   },
   "homepage": "https://github.com/eush77/css-codepoints",
   "repository": {
